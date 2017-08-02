@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+您好,欢迎来到
+<a href="#" th:href="@{ http://www.13322.com }">一比分</a>
+<br/>
+<a href="#" th:href="@{ 'http://www.13322.com/user/'+ ${type} + '.html'}">注册账号</a>
+
+<p th:text="'Hello！, ' + ${name} + '!'" ></p>
+</body>
+</html>

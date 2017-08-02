@@ -29,7 +29,7 @@
 		<module>spring-boot-samples-activemq</module>
 		<module>spring-boot-samples-mail</module>
 		<module>spring-boot-samples-mybatis</module>
-        <module>../base-samples</module>
+        <!--<module>../base-samples</module>-->
     </modules>
 
 	<properties>

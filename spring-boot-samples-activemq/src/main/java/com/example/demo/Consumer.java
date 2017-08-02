@@ -19,7 +19,7 @@ public class Consumer {
         System.out.println("赵云接收到的消息："+text);
     }
 
-    @JmsListener(destination = "mytest.topic")
+    @JmsListener(destination = "info.mq.topic.video.state")
     public void receiveTopic(String text){
         System.out.println("刘备接收到的Topic消息："+text);
     }

@@ -22,7 +22,7 @@ public class ActivemqApplicationTests {
 	public void contextLoads() {
 		/*Destination queue = new ActiveMQQueue("mytest.queue");
 		producer.sendMessageQueue(queue, "hello queue!");*/
-		Destination topic = new ActiveMQTopic("rb.refresh.status");
+		Destination topic = new ActiveMQTopic("info.mq.queue.video.state");
 		producer.sendMessageTopic(topic, "hello topic!");
 	}
 

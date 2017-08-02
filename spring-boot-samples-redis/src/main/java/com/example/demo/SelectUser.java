@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import io.swagger.annotations.Api;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Controller;
@@ -26,7 +27,8 @@ public class SelectUser {
     @Cacheable(value="user-key")
     public User getUser() {
         //查询数据库
-        User user = new User();//userService.findByUserName("cowboy");
+        User user = User.builder().age(18).name("cowboy").build();//userService.findByUserName("cowboy");
+        User user1 = new User();
         System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");
         return user;
     }

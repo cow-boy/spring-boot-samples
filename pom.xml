@@ -29,7 +29,8 @@
 		<module>spring-boot-samples-activemq</module>
 		<module>spring-boot-samples-mail</module>
 		<module>spring-boot-samples-mybatis</module>
-		<module>spring-boot-samples-async</module>
+		<!--<module>spring-boot-samples-async</module>-->
+		<module>spring-boot-samples-scheduler</module>
         <!--<module>../base-samples</module>-->
     </modules>
 

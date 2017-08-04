@@ -13,6 +13,7 @@ import java.util.UUID;
 /**
  * Created by HUXU on 2017/7/18.
  */
+
 @RestController
 @EnableAutoConfiguration
 @RequestMapping("/redis")

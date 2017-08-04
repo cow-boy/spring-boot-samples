@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 /**
  * Created by HUXU on 2017/7/8.
  */
+
 @Component
 public class Consumer {
 

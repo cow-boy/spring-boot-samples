@@ -2,8 +2,6 @@ package com.example.demo;
 
 import lombok.Builder;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 /**
  * Created by HUXU on 2017/7/18.
@@ -16,6 +14,6 @@ public class User {
 
     private Integer age;
 
-    User(){}
+    //User(){}
 
 }

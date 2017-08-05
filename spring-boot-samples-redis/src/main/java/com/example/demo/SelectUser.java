@@ -29,7 +29,7 @@ public class SelectUser {
     public User getUser() {
         //查询数据库
         User user = User.builder().age(18).name("cowboy").build();//userService.findByUserName("cowboy");
-        User user1 = new User();
+        //User user1 = new User();
         System.out.println("若下面没出现“无缓存的时候调用”字样且能打印出数据表示测试成功");
         return user;
     }

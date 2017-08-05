@@ -43,9 +43,10 @@ public class RedisApplicationTests {
 
 	@Test
 	public void testObj() throws Exception {
-		User user=new User();
+		/*User user=new User();
 		user.setName("huxu");
-		user.setAge(18);
+		user.setAge(18);*/
+		User user = User.builder().age(18).name("cowboy").build();
 		ValueOperations<String, User> operations = redisTemplate.opsForValue();
 		operations.set("user-key", user);
 		operations.set("com.cow.f", user,1, TimeUnit.SECONDS);

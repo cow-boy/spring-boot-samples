@@ -31,6 +31,7 @@
 		<module>spring-boot-samples-mybatis</module>
 		<module>spring-boot-samples-asyncs</module>
 		<module>spring-boot-samples-scheduler</module>
+		<module>spring-boot-samples-aspect</module>
         <!--<module>../base-samples</module>-->
     </modules>
 
@@ -42,6 +43,7 @@
 		<lombok.version>1.16.18</lombok.version>
 		<swagger2.version>2.7.0</swagger2.version>
 		<swagger2.ui.version>2.7.0</swagger2.ui.version>
+		<commons-lang3.version>3.6</commons-lang3.version>
 	</properties>
 
 	<dependencies>
@@ -74,6 +76,12 @@
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>${swagger2.ui.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${commons-lang3.version}</version>
 		</dependency>
 
 	</dependencies>

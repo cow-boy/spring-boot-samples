@@ -25,8 +25,14 @@ public class RedisApplicationTests {
 
 	@Test
 	public void test() throws Exception {
-		stringRedisTemplate.opsForValue().set("name", "cowboy");
+		stringRedisTemplate.opsForValue().set("age", "18");
 		Assert.assertEquals("cowboy", stringRedisTemplate.opsForValue().get("name"));
+	}
+
+	@Test
+	public void testget() throws Exception {
+		Object age = redisTemplate.opsForValue().get("age");
+		System.out.println(age);
 	}
 
 	@Test

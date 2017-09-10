@@ -10,12 +10,12 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>cowboy</artifactId>
+	<artifactId>rabbitmq</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
-	<name>cowboy</name>
-	<description>Cowboy project for Spring Boot</description>
+	<name>rabbitmq</name>
+	<description>RabbitMq project for Spring Boot</description>
 
 	<properties>
 
@@ -23,8 +23,7 @@
 
 	<dependencies>
 
-
-    </dependencies>
+	</dependencies>
 
 	<!--<build>
 		<plugins>

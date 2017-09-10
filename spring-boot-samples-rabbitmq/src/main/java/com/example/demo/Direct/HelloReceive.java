@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloReceive {
 
-    @RabbitListener(queues="queue")    //监听器监听指定的Queue
+    @RabbitListener(queues="queue")    //监听器监听指定的Queue     (或者该类上加@RabbitListener(queues="queue")，方法上加@RabbitHandler)
     public void processC(String str) {
         System.out.println("Receive: "+str);
     }

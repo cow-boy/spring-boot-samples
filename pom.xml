@@ -32,6 +32,7 @@
 		<module>spring-boot-samples-asyncs</module>
 		<module>spring-boot-samples-scheduler</module>
 		<module>spring-boot-samples-aspect</module>
+		<module>spring-boot-samples-rabbitmq</module>
         <!--<module>../base-samples</module>-->
     </modules>
 

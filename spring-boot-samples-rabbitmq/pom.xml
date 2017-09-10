@@ -17,8 +17,6 @@
 	<name>rabbitmq</name>
 	<description>RabbitMq project for Spring Boot</description>
 
-
-
 	<properties>
 
 	</properties>

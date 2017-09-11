@@ -1,7 +1,9 @@
 package com.example.demo;
 
 import com.example.demo.Direct.HelloSender;
+import com.example.demo.Fanout.FanoutSender;
 import com.example.demo.Topic.TopicSender;
+import com.example.demo.callback.CallBackSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,12 @@ public class RabbitmqApplicationTests {
 
 	@Autowired
 	private TopicSender topicSender;
+
+	@Autowired
+	private FanoutSender fanoutSender;
+
+	@Autowired
+	private CallBackSender callBackSender;
 
 	@Test
 	public void helloSender() {
@@ -35,5 +43,14 @@ public class RabbitmqApplicationTests {
 		topicSender.send();
 	}
 
+	@Test
+	public void fanoutSender(){
+		fanoutSender.send();
+	}
+
+	@Test
+	public void callbak() {
+		callBackSender.send();
+	}
 
 }

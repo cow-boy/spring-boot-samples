@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
  * @create 2017-09-10 18:50
  **/
 @Configuration
-public class SenderConf {
+public class SenderConf1 {
 
     /**
      * Direct模式相当于一对一模式,一个消息被发送者发送后,会被转发到一个绑定的消息队列中,然后被一个接收者接收!，可以一个发送者多个接收者或多个发送者多个接收者

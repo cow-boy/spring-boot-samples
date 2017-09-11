@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * @create 2017-09-10 18:50
  **/
 @Configuration
-public class SenderConf {
+public class SenderConf2 {
 
     /**
      *topic 是RabbitMQ中最灵活的一种方式，可以根据binding_key自由的绑定不同的队列

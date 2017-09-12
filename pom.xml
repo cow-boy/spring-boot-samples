@@ -33,6 +33,7 @@
 		<module>spring-boot-samples-scheduler</module>
 		<module>spring-boot-samples-aspect</module>
 		<module>spring-boot-samples-rabbitmq</module>
+		<module>spring-boot-samples-base</module>
         <!--<module>../base-samples</module>-->
     </modules>
 

@@ -3,10 +3,13 @@ package com.example.demo.springmvc;/**
  */
 
 import com.example.demo.common.BaseController;
+import com.example.demo.common.ResWriter;
 import com.example.demo.util.IndentiCode;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
@@ -40,6 +43,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.*;
 @RequestMapping({"/", "/index"})
 @Api(value = "测试接口", description = "MVC接口")
 public class SpringMvc extends BaseController {   //extends BaseController
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @RequestMapping(value = "/", method = GET)  //http://127.0.0.1:8080/
     @ResponseBody
@@ -113,6 +118,16 @@ public class SpringMvc extends BaseController {   //extends BaseController
     public Object identicode(HttpServletRequest request, HttpServletResponse response, ModelMap modelMap) throws IOException {
         Map<String, String> crimg = IndentiCode.crimg(request, response);
         return setSuccessModelMap(modelMap, crimg);
+    }
+
+    @RequestMapping(value = "/videohs", method = { RequestMethod.GET })
+    public void videohs(HttpServletResponse res) {
+        try {
+            String str = "videohs";
+            ResWriter.write(res, str);
+        } catch (IOException e) {
+            logger.error("失败：", e);
+        }
     }
 
 }

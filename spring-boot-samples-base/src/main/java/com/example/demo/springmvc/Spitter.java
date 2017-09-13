@@ -18,7 +18,7 @@ import javax.validation.constraints.Size;
 @Data
 public class Spitter {
 
-    private Long id;
+    private int id;
 
     @NotNull
     @Size(min = 5, max = 15)

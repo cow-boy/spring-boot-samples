@@ -46,6 +46,8 @@
 		<swagger2.version>2.7.0</swagger2.version>
 		<swagger2.ui.version>2.7.0</swagger2.ui.version>
 		<commons-lang3.version>3.6</commons-lang3.version>
+		<fastjson.version>1.2.38</fastjson.version>
+		<patchca.version>0.5.0</patchca.version>
 	</properties>
 
 	<dependencies>
@@ -86,6 +88,23 @@
 			<version>${commons-lang3.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.cowboy</groupId>
+			<artifactId>patchca</artifactId>
+			<version>${patchca.version}</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -101,14 +120,14 @@
 		<repository>
 			<id>Nexus</id>
 			<name>Team Nexus Repository</name>
-			<url>http://192.168.1.1:8081/nexus/content/groups/public</url>
+			<url>http://39.108:9903/nexus/content/groups/public</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>Nexus</id>
 			<name>Team Nexus Repository</name>
-			<url>http://192.168.1.1:8081/nexus/content/groups/public</url>
+			<url>http://39.108:9903/nexus/content/groups/public</url>
 		</pluginRepository>
 	</pluginRepositories>-->
 

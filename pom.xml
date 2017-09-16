@@ -34,6 +34,7 @@
 		<module>spring-boot-samples-aspect</module>
 		<module>spring-boot-samples-rabbitmq</module>
 		<module>spring-boot-samples-base</module>
+		<module>spring-boot-samples-fastdfs</module>
         <!--<module>../base-samples</module>-->
     </modules>
 
@@ -46,6 +47,9 @@
 		<swagger2.version>2.7.0</swagger2.version>
 		<swagger2.ui.version>2.7.0</swagger2.ui.version>
 		<commons-lang3.version>3.6</commons-lang3.version>
+		<fastjson.version>1.2.38</fastjson.version>
+		<patchca.version>0.5.0</patchca.version>
+		<joda-time.version>2.9.9</joda-time.version>
 	</properties>
 
 	<dependencies>
@@ -59,6 +63,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- 添加thymeleaf -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 
 		<dependency>
@@ -86,6 +96,36 @@
 			<version>${commons-lang3.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-logging</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${fastjson.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.cowboy</groupId>
+			<artifactId>patchca</artifactId>
+			<version>${patchca.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>${joda-time.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+			<scope>true</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -94,22 +134,29 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 
-	<!--<repositories>
+	<repositories>
 		<repository>
 			<id>Nexus</id>
 			<name>Team Nexus Repository</name>
-			<url>http://192.168.1.1:8081/nexus/content/groups/public</url>
+			<url>http://39.108.49.183:9903/nexus/content/groups/public</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>Nexus</id>
 			<name>Team Nexus Repository</name>
-			<url>http://192.168.1.1:8081/nexus/content/groups/public</url>
+			<url>http://39.108.49.183:9903/nexus/content/groups/public</url>
 		</pluginRepository>
-	</pluginRepositories>-->
+	</pluginRepositories>
 
 </project>

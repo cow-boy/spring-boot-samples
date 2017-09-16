@@ -10,21 +10,28 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>base</artifactId>
+	<artifactId>fastdfs</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>base</name>
-	<description>Base project for Spring Boot</description>
+	<name>fastdfs</name>
+	<description>FastDFS project for Spring Boot</description>
 
 	<properties>
-
+		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>-->
 	</properties>
 
 	<dependencies>
 
-
-    </dependencies>
+		<dependency>
+			<groupId>com.github.tobato</groupId>
+			<artifactId>fastdfs-client</artifactId>
+			<version>1.25.2-RELEASE</version>
+		</dependency>
+		
+	</dependencies>
 
 	<!--<build>
 		<plugins>

@@ -1,0 +1,31 @@
+
+#fdfs.soTimeout=1500
+#fdfs.connectTimeout=600
+#fdfs.thumbImage.width=150
+#fdfs.thumbImage.height=150
+#fdfs.trackerList[0]=192.168.0.201:22122
+#fdfs.trackerList[1]=192.168.0.202:22122
+
+fdfs:
+  soTimeout: 1500
+  connectTimeout: 600
+  thumbImage:             #缩略图生成参数
+    width: 150
+    height: 150
+  trackerList:            #TrackerList参数,支持多个
+    - 39.108.49.183:22122
+   # - 192.168.0.202:22122
+  pool:        #必须配置,当时我没有配置启动就报错
+     #从池中借出的对象的最大数目
+    maxTotal: 153
+      #获取连接时的最大等待毫秒数100
+    maxWaitMillis: 102
+  webServerUrl: 39.108.1.1:8888/
+
+
+spring:
+  http:
+    multipart:
+      enabled: true
+      max-file-size: 5MB #(这里是限制的文件大小)
+      max-request-size: 5MB #(这里是限制的文件大小)

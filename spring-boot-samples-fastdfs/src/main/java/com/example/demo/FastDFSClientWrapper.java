@@ -3,6 +3,7 @@ package com.example.demo;/**
  */
 
 import com.github.tobato.fastdfs.conn.FdfsWebServer;
+import com.github.tobato.fastdfs.domain.MateData;
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.exception.FdfsUnsupportStorePathException;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
@@ -16,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.*;
 import java.nio.charset.Charset;
+import java.util.Set;
 
 /**
  * FastDFS文件上传下载包装类
@@ -36,9 +38,6 @@ public class FastDFSClientWrapper {
 
     @Autowired
     private FastFileStorageClient storageClient;
-
-   /* @Autowired
-    private AppConfig appConfig;   // 项目参数配置*/
 
     @Autowired
     private FdfsWebServer fdfsWebServer;
@@ -69,9 +68,6 @@ public class FastDFSClientWrapper {
 
     // 封装图片完整URL地址
     private String getResAccessUrl(StorePath storePath) {
-        /*String fileUrl = AppConstants.HTTP_PRODOCOL + appConfig.getResHost()
-                + ":" + appConfig.getFdfsStoragePort() + "/" + storePath.getFullPath();
-        return fileUrl;*/
         String fileUrl = fdfsWebServer.getWebServerUrl() + storePath.getFullPath();
         return fileUrl;
     }
@@ -106,6 +102,8 @@ public class FastDFSClientWrapper {
         return storePath;
     }
 
+    /*public Set<MateData> getMetadata(String groupName, String path){
 
+    }*/
 
 }

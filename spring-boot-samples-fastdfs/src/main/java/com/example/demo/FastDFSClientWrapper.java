@@ -3,10 +3,15 @@ package com.example.demo;/**
  */
 
 import com.github.tobato.fastdfs.conn.FdfsWebServer;
+import com.github.tobato.fastdfs.domain.FileInfo;
 import com.github.tobato.fastdfs.domain.MateData;
 import com.github.tobato.fastdfs.domain.StorePath;
+import com.github.tobato.fastdfs.domain.ThumbImageConfig;
 import com.github.tobato.fastdfs.exception.FdfsUnsupportStorePathException;
+import com.github.tobato.fastdfs.proto.storage.DownloadByteArray;
+import com.github.tobato.fastdfs.service.AppendFileStorageClient;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
+import com.github.tobato.fastdfs.service.TrackerClient;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
@@ -15,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.io.*;
 import java.nio.charset.Charset;
 import java.util.Set;
@@ -37,10 +43,19 @@ public class FastDFSClientWrapper {
     private final Logger logger = LoggerFactory.getLogger(FastDFSClientWrapper.class);
 
     @Autowired
-    private FastFileStorageClient storageClient;
+    protected FastFileStorageClient storageClient;  //storageClient的操作
 
     @Autowired
-    private FdfsWebServer fdfsWebServer;
+    private ThumbImageConfig thumbImageConfig;     //缩略图
+
+    @Autowired
+    protected AppendFileStorageClient appendFileStorageClient;  //断点续传
+
+    @Autowired
+    private TrackerClient trackerClient;   // TrackerClientTest的操作
+
+    @Autowired
+    private FdfsWebServer fdfsWebServer;   //配置文件
 
     /**
      * 上传文件
@@ -84,6 +99,7 @@ public class FastDFSClientWrapper {
         try {
             StorePath storePath = StorePath.praseFromUrl(fileUrl);
             storageClient.deleteFile(storePath.getGroup(), storePath.getPath());
+            //storageClient.deleteFile(storePath.getFullPath());
         } catch (FdfsUnsupportStorePathException e) {
             logger.warn(e.getMessage());
         }
@@ -102,8 +118,27 @@ public class FastDFSClientWrapper {
         return storePath;
     }
 
-    /*public Set<MateData> getMetadata(String groupName, String path){
+    /**
+     * 下载
+     * @param fileUrl
+     * @return
+     */
+    public byte[] download(String fileUrl){
+        StorePath storePath = StorePath.praseFromUrl(fileUrl);
+        DownloadByteArray callback = new DownloadByteArray();
+        byte[] content = storageClient.downloadFile(storePath.getGroup(), storePath.getPath(), callback);
+        return content;
+    }
 
-    }*/
+    /**
+     * 查询
+     * @param fileUrl
+     */
+    public void queryFileInfo(String fileUrl){
+        StorePath storePath = StorePath.praseFromUrl(fileUrl);
+        FileInfo fileInfo = storageClient.queryFileInfo(storePath.getGroup(), storePath.getPath());
+        logger.debug("查询文件信息 result={}", fileInfo);
+
+    }
 
 }

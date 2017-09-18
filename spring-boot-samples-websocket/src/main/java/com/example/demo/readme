@@ -1,0 +1,6 @@
+WebSocket 为浏览器和服务器端提供了双工异步通信的功能，即浏览器可以向服务器发送消息，服务器也可以向浏览器发送消息。
+WebSocket 需要浏览器的支持，如IE 10＋、Chrome 13＋、Firefox 6＋。
+
+Websocket 是通过一个socket来实现双工异步通讯的能力。但是直接使用WebSocket协议开发程序显得特别烦琐，
+我们会使用它的子协议STOMP，它是一个更高级级别的协议，STOMP协议使用一个基于帧（frame）的格式来定义信息，
+与HTTP的request 和response 类似（具有类似于 @RequestMapping 的 @MessageMapping ）在后面的内容中可以观察STOMP的frame

@@ -21,6 +21,7 @@
 		<!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>-->
+		<fastdfs.version>1.25.4-RELEASE</fastdfs.version>
 	</properties>
 
 	<dependencies>
@@ -28,7 +29,7 @@
 		<dependency>
 			<groupId>com.github.tobato</groupId>
 			<artifactId>fastdfs-client</artifactId>
-			<version>1.25.2-RELEASE</version>
+			<version>${fastdfs.version}</version>
 		</dependency>
 		
 	</dependencies>

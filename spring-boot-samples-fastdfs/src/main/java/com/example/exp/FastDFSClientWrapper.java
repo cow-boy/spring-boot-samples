@@ -1,10 +1,9 @@
-package com.example.demo;/**
+package com.example.exp;/**
  * Created by HUXU on 2017/9/16.
  */
 
 import com.github.tobato.fastdfs.conn.FdfsWebServer;
 import com.github.tobato.fastdfs.domain.FileInfo;
-import com.github.tobato.fastdfs.domain.MateData;
 import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.domain.ThumbImageConfig;
 import com.github.tobato.fastdfs.exception.FdfsUnsupportStorePathException;
@@ -20,10 +19,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
 import java.io.*;
 import java.nio.charset.Charset;
-import java.util.Set;
 
 /**
  * FastDFS文件上传下载包装类
@@ -36,6 +33,8 @@ import java.util.Set;
     GenerateStorageClient - 一般文件存储接口 (StorageServer接口)
     FastFileStorageClient - 为方便项目开发集成的简单接口(StorageServer接口)
     AppendFileStorageClient - 支持文件续传操作的接口 (StorageServer接口)
+
+ * tenginx+ImageMagick+Lua+FastDfs分布式自动缩略图
  **/
 @Component
 public class FastDFSClientWrapper {

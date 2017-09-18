@@ -35,6 +35,7 @@
 		<module>spring-boot-samples-rabbitmq</module>
 		<module>spring-boot-samples-base</module>
 		<module>spring-boot-samples-fastdfs</module>
+		<module>spring-boot-samples-caffeine</module>
         <!--<module>../base-samples</module>-->
     </modules>
 
@@ -155,7 +156,7 @@
 		<pluginRepository>
 			<id>Nexus</id>
 			<name>Team Nexus Repository</name>
-			<url>http://39.108.:9903/nexus/content/groups/public</url>
+			<url>http://39.108.49./nexus/content/groups/public</url>
 		</pluginRepository>
 	</pluginRepositories>
 

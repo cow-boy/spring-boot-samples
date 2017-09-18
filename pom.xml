@@ -148,14 +148,14 @@
 		<repository>
 			<id>Nexus</id>
 			<name>Team Nexus Repository</name>
-			<url>http://39.108.49.183:9903/nexus/content/groups/public</url>
+			<url>http://39.108.:9903/nexus/content/groups/public</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>Nexus</id>
 			<name>Team Nexus Repository</name>
-			<url>http://39.108.49.183:9903/nexus/content/groups/public</url>
+			<url>http://39.108.:9903/nexus/content/groups/public</url>
 		</pluginRepository>
 	</pluginRepositories>
 

@@ -1,0 +1,11 @@
+#application.yml配置文件中配置：
+#优点：简单
+#缺点：无法针对每个cache配置不同的参数，比如过期时长、最大容量
+spring:
+  cache:
+    type: CAFFEINE
+    cache-names:
+      - getPersonById
+      - name2
+    caffeine:
+      spec: maximumSize=500,expireAfterWrite=5s    #      spec: maximumSize=500,expireAfterWrite=5s

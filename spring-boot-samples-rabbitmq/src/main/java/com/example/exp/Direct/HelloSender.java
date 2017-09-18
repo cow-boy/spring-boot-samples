@@ -1,8 +1,8 @@
-package com.example.demo.Direct;/**
+package com.example.exp.Direct;/**
  * Created by HUXU on 2017/9/10.
  */
 
-import com.example.demo.User;
+import com.example.exp.User;
 import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

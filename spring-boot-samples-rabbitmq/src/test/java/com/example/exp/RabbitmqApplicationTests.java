@@ -1,9 +1,9 @@
-package com.example.demo;
+package com.example.exp;
 
-import com.example.demo.Direct.HelloSender;
-import com.example.demo.Fanout.FanoutSender;
-import com.example.demo.Topic.TopicSender;
-import com.example.demo.callback.CallBackSender;
+import com.example.exp.Direct.HelloSender;
+import com.example.exp.Fanout.FanoutSender;
+import com.example.exp.Topic.TopicSender;
+import com.example.exp.callback.CallBackSender;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

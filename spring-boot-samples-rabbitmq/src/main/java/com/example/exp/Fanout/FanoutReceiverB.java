@@ -1,4 +1,4 @@
-package com.example.demo.Fanout;/**
+package com.example.exp.Fanout;/**
  * Created by huxu on 2017/9/10.
  */
 

@@ -1,4 +1,4 @@
-package com.example.demo.callback;/**
+package com.example.exp.callback;/**
  * Created by huxu on 2017/9/10.
  */
 
@@ -9,7 +9,6 @@ package com.example.demo.callback;/**
  * @create 2017-09-10 23:47
  **/
 
-import java.util.Date;
 import java.util.UUID;
 
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

@@ -1,13 +1,22 @@
 package com.example.demo;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -42,5 +51,21 @@ public class SelectUser {
         }
         session.setAttribute("uid", uid);
         return session.getId();
+    }
+
+    @Autowired
+    private RedisTemplate redisTemplate;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
+
+    @ApiOperation(value = "删除资讯Redis缓存")
+    @PostMapping("/delete")
+    public Object getSms(
+            ModelMap modelMap,
+            @ApiParam(required = true, value = "缓存前缀") @RequestParam(value = "str", required = true) String str) {
+        Set keys = redisTemplate.keys(str+"*");
+        redisTemplate.delete(keys);
+        return "okk";
     }
 }

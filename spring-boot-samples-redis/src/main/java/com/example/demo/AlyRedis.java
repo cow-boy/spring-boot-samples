@@ -15,11 +15,11 @@ public class AlyRedis {
 
     public static void main(String[] args) {
         try {
-            String host = "39.108.49.1";//控制台显示访问地址
+            String host = "39.108";//控制台显示访问地址
             int port = 6379;
             Jedis jedis = new Jedis(host, port);
 //鉴权信息
-            jedis.auth("alyRedis123");//password
+            jedis.auth("");//password
             String key = "redis";
             String value = "aliyun-redis";
 //select db默认为0

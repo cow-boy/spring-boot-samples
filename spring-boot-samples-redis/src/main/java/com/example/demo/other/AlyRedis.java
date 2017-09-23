@@ -1,4 +1,4 @@
-package com.example.demo;/**
+package com.example.demo.other;/**
  * Created by huxu on 2017/8/6.
  */
 

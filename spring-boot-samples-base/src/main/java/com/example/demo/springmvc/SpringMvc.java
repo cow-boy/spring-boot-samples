@@ -25,9 +25,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+
 import org.joda.time.DateTime;
 import static org.springframework.web.bind.annotation.RequestMethod.*;
 
@@ -262,6 +261,23 @@ public class SpringMvc extends BaseController {   //extends BaseController
     public String md5(@PathVariable("md5") String md5){
         String mw = DigestUtils.md5DigestAsHex(md5.getBytes());//strPass为明码字符
         return mw;
+    }
+
+    @ApiOperation(value = "返回实体类对象")
+    @RequestMapping("getUser")
+    public User getUser(){
+        return new User("张三",11);
+    }
+
+    @ApiOperation(value = "返回list集合对象，同时也可以返回一个map集合")
+    @RequestMapping("lists")
+    public List<User> findAll(){
+        List<User> list = new ArrayList<>();
+        list.add(new User("张三",1));
+        list.add(new User("李四",2));
+        list.add(new User("王五",3));
+        list.add(new User("赵六",4));
+        return list;
     }
 
 }

@@ -38,6 +38,8 @@
         <module>spring-boot-samples-websocket</module>
 		<module>spring-boot-samples-datasource</module>
 		<module>spring-boot-samples-mybatisbase</module>
+		<module>spring-boot-samples-overjson</module>
+		<module>spring-boot-samples-logback</module>
     </modules>
 
 	<properties>
@@ -127,6 +129,7 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
+		<!-- 热部署 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>

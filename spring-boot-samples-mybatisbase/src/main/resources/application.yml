@@ -1,28 +1,8 @@
-#单数据源
+## 开发/测试/生产环境分别对应dev/test/prod
 spring:
-  datasource:
-      name: test
-      url: jdbc:mysql://rm.mysql.rds.aliyuncs.com:3306/mydb01?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
-      username: root
-      password: Java2018
-      # 使用druid数据源
-      type: com.alibaba.druid.pool.DruidDataSource
-      driver-class-name: com.mysql.jdbc.Driver
-      filters: stat
-      maxActive: 20
-      initialSize: 1
-      maxWait: 60000
-      minIdle: 1
-      timeBetweenEvictionRunsMillis: 60000
-      minEvictableIdleTimeMillis: 300000
-      validationQuery: select 'x'
-      testWhileIdle: true
-      testOnBorrow: false
-      testOnReturn: false
-      poolPreparedStatements: true
-      maxOpenPreparedStatements: 20
+  profiles:
+    active: test
 
-#mybatis配置
-mybatis:
-  typeAliasesPackage: com.example.demo.domain
-  mapper-locations: classpath:mapper/*.xml
+#日志信息
+logging:
+    config: classpath:logback-boot.xml

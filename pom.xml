@@ -28,7 +28,6 @@
 		<module>spring-boot-samples-mongodb</module>
 		<module>spring-boot-samples-activemq</module>
 		<module>spring-boot-samples-mail</module>
-		<module>spring-boot-samples-mybatis</module>
 		<module>spring-boot-samples-asyncs</module>
 		<module>spring-boot-samples-scheduler</module>
 		<module>spring-boot-samples-aspect</module>
@@ -37,6 +36,8 @@
 		<module>spring-boot-samples-fastdfs</module>
 		<module>spring-boot-samples-caffeine</module>
         <module>spring-boot-samples-websocket</module>
+		<module>spring-boot-samples-datasource</module>
+		<module>spring-boot-samples-mybatisbase</module>
     </modules>
 
 	<properties>

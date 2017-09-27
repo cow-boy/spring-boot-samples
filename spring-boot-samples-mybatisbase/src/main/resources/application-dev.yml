@@ -2,7 +2,7 @@
 spring:
   datasource:
       name: test
-      url: jdbc:mysql://.mysql.rds.aliyuncs.com:3306/mydb01?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
+      url: jdbc:mysql://rm-.mysql.rds.aliyuncs.com:3306/mydb01?useUnicode=true&characterEncoding=gbk&zeroDateTimeBehavior=convertToNull&useSSL=false
       username: root
       password: Java2018
       # 使用druid数据源

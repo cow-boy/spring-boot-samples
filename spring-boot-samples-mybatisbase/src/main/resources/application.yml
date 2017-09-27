@@ -5,4 +5,4 @@ spring:
 
 #日志信息
 logging:
-    config: classpath:logback-other.xml
+    config: classpath:logback-spring.xml
